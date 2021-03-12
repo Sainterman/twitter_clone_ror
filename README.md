@@ -1,24 +1,13 @@
-# README
+# Twitter clone
+### To run this  app you'll need Rails 6 and ruby 3.0.0
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### The database is postgresql 10 so you'll need that also
+#### Make sure to start your postgres service
 
-Things you may want to cover:
+### After these dependencies are installed in your OS you can run bundle install to install the necesary gems
 
-* Ruby version
+### You can start the app with the command bin/rails server
+#### which will host a server at 127.0.0.1:3000, visit there and sign up, log in and start tweeting.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+#### This clone is still bare bones, there's a lot of features missing and bugs.
+### you can visit a live version 
