@@ -6,10 +6,18 @@ class TweetController < ApplicationController
         @tweet = Tweet.new
     end
     
+    def show
+
+    end
+
     def create
-        @tweet = Tweet.new(tweet_params)
+        @tweet = Tweet.new
+        @tweet.content = tweet_params[:content]
+        byebug
+        @tweet.user_id = current_user.id
         if @tweet.save
-            redirect_to(@tweet)
+            flash[:notice] = "Tweet posted"
+            redirect_to :root
         else
             render :new
         end
@@ -18,7 +26,7 @@ class TweetController < ApplicationController
     private
 
     def tweet_params
-        params.require(:tweet).permit(:content, :user_id)
+        params.require(:tweet).permit(:content)
     end
 
 end
