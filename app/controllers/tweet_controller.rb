@@ -13,7 +13,6 @@ class TweetController < ApplicationController
     def create
         @tweet = Tweet.new
         @tweet.content = tweet_params[:content]
-        byebug
         @tweet.user_id = current_user.id
         if @tweet.save
             flash[:notice] = "Tweet posted"
