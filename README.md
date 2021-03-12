@@ -2,7 +2,7 @@
 ### To run this  app you'll need Rails 6 and ruby 3.0.0
 
 ### The database is postgresql 10 so you'll need that also
-#### Make sure to start your postgres server running
+#### Make sure to start your postgres service
 
 ### After these dependencies are installed in your OS you can run bundle install to install the necesary gems
 
