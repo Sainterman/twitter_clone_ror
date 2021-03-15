@@ -1,8 +1,18 @@
-
-
-tweets:
-<%= render partial: "tweets", locals: {user: @user, tweets: @tweets } %>
-followers:
-<%= render partial: "followers", locals: {user: @user } %>
-following:
-<%= render partial: "followees", locals: {user: @user } %>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            tweets:
+            <%= render partial: "tweets", locals: {user: @user, tweets: @tweets } %>
+        </div>
+        <div class="col">
+            
+            followers:
+            <%= render partial: "followers", locals: {user: @user } %>
+        </div>
+        <div class="col">
+            
+            following:
+            <%= render partial: "followees", locals: {user: @user } %>
+        </div>
+    </div>
+</div>

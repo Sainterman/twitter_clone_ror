@@ -1,0 +1,3 @@
+class FollowshipController < ApplicationRecord
+
+end

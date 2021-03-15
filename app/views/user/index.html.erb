@@ -1,8 +1,8 @@
 <div class="container">
-    <div class="row">
         <div class="col">
-            <%= render partial: "welcome/index" %>
+            <%= link_to 'Tweet', new_user_tweet_path(current_user), class: "btn btn-primary" %>
         </div>
+    <div class="row">
         
         <div class="col">
             <h2>tweets</h2>
