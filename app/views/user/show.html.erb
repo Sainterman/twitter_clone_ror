@@ -1,0 +1,8 @@
+
+
+tweets:
+<%= render partial: "tweets", locals: {user: @user, tweets: @tweets } %>
+followers:
+<%= render partial: "followers", locals: {user: @user } %>
+following:
+<%= render partial: "followees", locals: {user: @user } %>

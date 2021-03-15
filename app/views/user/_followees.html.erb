@@ -1,0 +1,10 @@
+<% user.followees.each do |followee| %>
+<div class="row">
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title"><%= followee.name %></h5>
+            <h6 class="card-subtitle mb-2 text-muted">@<%= followee.username %></h6>
+        </div>
+    </div>
+</div>
+<% end %>

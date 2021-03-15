@@ -1,21 +1,23 @@
-<%= render partial: "welcome/index" %>
-<h2>List of tweets</h2>
-<% @tweets.each do |tweet| %>
-    <div class="card" style="width: 18rem;">
-    <div class="card-body">
-        <h5 class="card-title"><%= current_user.name %></h5>
-        <h6 class="card-subtitle mb-2 text-muted">@<%= current_user.username %></h6>
-        <p class="card-text"><%= tweet.content %></p>
-        <p class="card-text"><%= tweet.created_at %></p>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <%= render partial: "welcome/index" %>
+        </div>
+        
+        <div class="col">
+            <h2>tweets</h2>
+            <%= render partial: "tweets" , locals: {user: current_user, tweets: @tweets } %>
+        </div>
+        
+        <div class="col">
+            
+            <h2>Followers</h2>
+            <%= render partial: "followers" , locals: {user: current_user } %>
+        </div>
+        <div class="col">
+            
+            <h2>Following</h2>
+            <%= render partial: "followees" , locals: {user: current_user } %>
+        </div>
     </div>
-    </div>
-<% end %>
-<h3>Followers: </h3>
-<% @followers.each do |follower| %>
-    <div class="card" style="width: 18rem;">
-    <div class="card-body">
-        <h5 class="card-title"><%= follower.name %></h5>
-        <h6 class="card-subtitle mb-2 text-muted">@<%= follower.username %></h6>
-    </div>
-    </div>
-<% end %>
+</div>

@@ -1,10 +1,14 @@
 class UserController < ApplicationController
     def index
-        @tweets = current_user.tweets
-        @followers = current_user.followers
+        set_user_profile(current_user)
     end
 
     def new
+    end
+
+    def show
+        @user = User.find_by(id: params[:id])
+        set_user_profile(@user)
     end
 
     def search
@@ -14,5 +18,11 @@ class UserController < ApplicationController
     def follow
         @user = User.find_by(username: params[:username])
         current_user.follow(@user)
+    end
+
+    def set_user_profile(user)
+        @tweets = user.tweets
+        @followers = user.followers
+        @followees = user.followees
     end
 end

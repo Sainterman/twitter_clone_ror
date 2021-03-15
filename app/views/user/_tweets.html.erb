@@ -1,0 +1,12 @@
+<% tweets.each do |tweet| %>
+    <div class="row">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title"><%= user.name %></h5>
+                <h6 class="card-subtitle mb-2 text-muted">@<%= user.username %></h6>
+                <p class="card-text"><%= tweet.content %></p>
+                <p class="card-text"><%= tweet.created_at %></p>
+            </div>
+        </div>
+    </div>
+<% end %>
