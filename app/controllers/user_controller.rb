@@ -1,6 +1,7 @@
 class UserController < ApplicationController
     def index
         @tweets = current_user.tweets
+        @followers = current_user.followers
     end
 
     def new

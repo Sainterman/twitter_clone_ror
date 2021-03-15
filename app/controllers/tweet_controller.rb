@@ -18,6 +18,7 @@ class TweetController < ApplicationController
             flash[:notice] = "Tweet posted"
             redirect_to :root
         else
+            flash[:alert] = "Tweet failed"
             render :new
         end
     end
